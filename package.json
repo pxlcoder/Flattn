@@ -1,0 +1,12 @@
+{
+	"name": "Kompress",
+	"version": "0.0.1",
+	"author": "Aditya Keerthi",
+	"main": "server.js",
+	"dependencies": {
+		"express": "~4.5.1",
+		"mongoose": "~3.8.0",
+		"shortid": "~2.2.4"
+	}
+}
+
