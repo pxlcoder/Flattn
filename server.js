@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({extended: 'true'}));
 
 var db = require('./config/db');
 
-var port = process.env.port || 8080;
+var port = process.env.PORT || 8080;
 mongoose.connect(db.url);
 
 // routes
