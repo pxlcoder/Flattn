@@ -1,0 +1,1 @@
+angular.module('Kompress', ['ngRoute', 'appRoutes', 'MainCtrl', 'LinkService']);

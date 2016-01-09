@@ -20,6 +20,8 @@ mongoose.connect(db.url);
 
 // routes
 
+app.use(express.static(__dirname + '/public')); 
+
 require('./app/routes')(app);
 
 app.listen(port);

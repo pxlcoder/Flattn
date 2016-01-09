@@ -23,14 +23,18 @@ module.exports = function(app){
 
 	app.post('/api/create', function(req,res){
 		var link = new Link();
-		link.url = req.body.url.replace('http://','');
+		link.url = req.body.url.replace('http://','').replace('https://','');
 
 		link.save(function(err){
 			if(err){
 				res.send(err);
 			}else{
-				res.json({'message': 'Link created!', 'id': link.id});
+				res.json({'message': 'Link created!', 'id': 'kompress.me/' + link.id});
 			}
 		});
+	});
+
+	app.get('*', function(req,res){
+		res.sendfile('./public/index.html');
 	});
 };

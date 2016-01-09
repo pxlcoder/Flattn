@@ -1,0 +1,21 @@
+.nav-wrapper {
+	margin-left: 15px;
+}
+
+.vcenter {
+	position: relative;
+  	top: 50%;
+  	-webkit-transform: translateY(-50%);
+  	-ms-transform: translateY(-50%);
+  	transform: translateY(-50%);
+}
+
+.toast {
+    position: fixed !important;
+    width: 100% !important;
+    bottom: 0px !important;
+    left: 0px !important;
+    top: 90vh !important;
+    background-color: #ec6f75;
+    text-align: center;
+}
