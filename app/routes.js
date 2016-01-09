@@ -23,13 +23,13 @@ module.exports = function(app){
 
 	app.post('/api/create', function(req,res){
 		var link = new Link();
-		link.url = req.body.url;
+		link.url = req.body.url.replace('http://','');
 
 		link.save(function(err){
 			if(err){
 				res.send(err);
 			}else{
-				res.json({'message': 'Link created!'});
+				res.json({'message': 'Link created!', 'id': link.id});
 			}
 		});
 	});
