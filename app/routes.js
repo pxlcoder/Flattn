@@ -9,14 +9,14 @@ module.exports = function(app){
 	app.get('/:id', function(req,res){
 		Link.findOne({'id': req.params.id}, function(err,link){
 			if(err){
-				res.json({'message': 'Error!'});
+				res.send(404);
 			}else{
 				if (link){
 					link.views += 1;
 					link.save();
 					res.redirect('http://' + link.url);
 				}else{
-					res.json({'message': 'Error!'});
+					res.send(404);
 				}
 			}
 		});
