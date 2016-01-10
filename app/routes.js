@@ -1,4 +1,5 @@
 var Link = require('./models/link')
+var shortid = require('shortid');
 
 module.exports = function(app){
 	app.get('/version', function(req,res){
@@ -24,6 +25,7 @@ module.exports = function(app){
 	app.post('/api/create', function(req,res){
 		var link = new Link();
 		link.url = req.body.url.replace('http://','').replace('https://','');
+		link.id = shortid.generate().substring(0,6);
 
 		link.save(function(err){
 			if(err){
