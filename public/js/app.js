@@ -1,1 +1,1 @@
-angular.module('Kompress', ['ngRoute', 'appRoutes', 'MainCtrl', 'LinkService']);
+angular.module('Flattn', ['ngRoute', 'appRoutes', 'MainCtrl', 'LinkService']);

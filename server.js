@@ -1,4 +1,4 @@
-// Kompress server
+// Flattn server
 
 // modules
 
@@ -26,6 +26,6 @@ require('./app/routes')(app);
 
 app.listen(port);
 
-console.log('Kompress server running on ' + port);
+console.log('Flattn server running on ' + port);
 
 module.exports = app;

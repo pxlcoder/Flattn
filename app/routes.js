@@ -3,7 +3,7 @@ var shortid = require('shortid');
 
 module.exports = function(app){
 	app.get('/version', function(req,res){
-		res.json({'Kompress': {'version': '0.0.1'}});
+		res.json({'Flattn': {'version': '0.0.1'}});
 	});
 
 	app.get('/:id', function(req,res){
@@ -31,7 +31,7 @@ module.exports = function(app){
 			if(err){
 				res.send(err);
 			}else{
-				res.json({'message': 'Link created!', 'id': 'kompress.me/' + link.id});
+				res.json({'message': 'Link created!', 'id': 'flattn.me/' + link.id});
 			}
 		});
 	});
