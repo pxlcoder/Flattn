@@ -2,7 +2,7 @@
 	<div class="row vcenter">
 		<div class="col s10 push-s1">
 	    	<div class="col s12 m8 l10"><input placeholder={{placeholder}} ng-model="url" type="text"></div>
-	    	<div class="col s12 m4 l2"><button ng-click="createURL()" class="waves-effect waves-light red accent-2 btn modal-trigger" type="button" style="width:100%;">Create</button></div>
+	    	<div class="col s12 m4 l2"><button ng-click="createURL()" ng-disabled="loading" class="waves-effect waves-light red accent-2 btn modal-trigger" type="button" style="width:100%;">Create</button></div>
 	    </div>
 	</div>
 </div>
